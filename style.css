@@ -11,7 +11,7 @@
 :root {
     --primary-text-color: #183b56;
     --secondary-text-color: #577592;
-    --accent-color: #2294ed;
+    --accent-color: rgb(34, 148, 237);
     --accent-color-dark: #1d69a3;
     --padding-inline-section: 20px;
 }
@@ -110,7 +110,7 @@ ul {
 
 .top-banner {
     background-image: url('./assets/asset\ 30.png');
-    background-color: #4fb3d4;
+    background-color: rgb(79, 179, 212);
     background-size: 300px;
 }
 
@@ -168,6 +168,8 @@ header {
 }
 
 .header-right img {
+    width: 100%;
+}.header-right video {
     width: 100%;
 }
 
