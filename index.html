@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solar Solutions</title>
+    <title>Genius Solar Services</title>
     <meta name="description"
         content="Genious Solar Services offers over 25 years of experience in water purifier services and solar solutions. We provide top-quality installation and maintenance services for solar panels from leading brands like Adani, Havells, and Luminous.">
     <meta name="keywords"
@@ -16,6 +16,7 @@
         content="Expert solar solutions with over 25 years of experience. Offering high-quality installation and maintenance for top solar panel brands.">
     <!-- <meta property="og:image" content="assets/your-og-image.jpg"> Replace with your actual image path
     <meta property="og:url" content="https://yourwebsite.com"> Replace with your actual URL -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.6/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media-queries.css">
 </head>
@@ -23,172 +24,183 @@
 <body>
 
     <style>
-   /* General Styles */
-.about-us-section, .testimonial-section {
-    text-align: center;
-    padding: 40px 20px;
-}
+        /* General Styles */
+        .about-us-section,
+        .testimonial-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
 
-.section-content {
-    margin-bottom: 40px;
-}
+        .section-content {
+            margin-bottom: 40px;
+        }
 
-.section-heading {
-    font-size: 2.25rem; /* 36px */
-    margin-bottom: 20px;
-    font-weight: bold;
-}
+        .section-heading {
+            font-size: 2.25rem;
+            /* 36px */
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
 
-.section-text {
-    font-size: 1.125rem; /* 18px */
-    margin-bottom: 10px;
-}
+        .section-text {
+            font-size: 1.125rem;
+            /* 18px */
+            margin-bottom: 10px;
+        }
 
-.cutout-image, .luminous-logo {
-    width: auto;
-    height: auto;
-    margin: 20px auto;
-    display: block;
-}
+        .cutout-image,
+        .luminous-logo {
+            width: auto;
+            height: auto;
+            margin: 20px auto;
+            display: block;
+        }
 
-.about-us-details {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 20px;
-}
+        .about-us-details {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
 
-.about-photo {
-    flex: 1;
-    max-width: 200px;
-}
+        .about-photo {
+            flex: 1;
+            max-width: 200px;
+        }
 
-.about-text {
-    flex: 2;
-    text-align: left;
-}
+        .about-text {
+            flex: 2;
+            text-align: left;
+        }
 
-/* Testimonial Section */
-.testimonial-section {
-    background-color: #f4f4f4;
-    padding: 50px 0;
-}
+        /* Testimonial Section */
+        .testimonial-section {
+            background-color: #f4f4f4;
+            padding: 50px 0;
+        }
 
-.testimonial-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
+        .testimonial-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
 
-.testimonial-header h2 {
-    font-size: 2rem; /* 32px */
-    margin-bottom: 20px;
-}
+        .testimonial-header h2 {
+            font-size: 2rem;
+            /* 32px */
+            margin-bottom: 20px;
+        }
 
-.testimonial-area {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+        .testimonial-area {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
 
-.testimonial-card {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    min-width: 250px;
-    max-width: 350px;
-}
+        .testimonial-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+        }
 
-.testimonial-card img {
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    margin-bottom: 15px;
-}
+        .testimonial-card img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+        }
 
-.testimonial-card h5 {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
+        .testimonial-card h5 {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
 
-.testimonial-card p {
-    font-size: 0.875rem;
-    margin-bottom: 15px;
-}
+        .testimonial-card p {
+            font-size: 0.875rem;
+            margin-bottom: 15px;
+        }
 
-.testimonial-card .name {
-    font-size: 0.875rem;
-    font-weight: bold;
-    color: #333;
-}
+        .testimonial-card .name {
+            font-size: 0.875rem;
+            font-weight: bold;
+            color: #333;
+        }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .section-heading {
-        font-size: 1.875rem; /* 30px */
-    }
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .section-heading {
+                font-size: 1.875rem;
+                /* 30px */
+            }
 
-    .section-text {
-        font-size: 1rem; /* 16px */
-    }
+            .section-text {
+                font-size: 1rem;
+                /* 16px */
+            }
 
-    .about-us-details {
-        flex-direction: column;
-    }
+            .about-us-details {
+                flex-direction: column;
+            }
 
-    .about-photo {
-        max-width: 150px;
-    }
+            .about-photo {
+                max-width: 150px;
+            }
 
-    .about-text {
-        text-align: center;
-    }
+            .about-text {
+                text-align: center;
+            }
 
-    .testimonial-area {
-        flex-direction: column;
-        align-items: center;
-    }
+            .testimonial-area {
+                flex-direction: column;
+                align-items: center;
+            }
 
-    .testimonial-card {
-        max-width: 100%;
-    }
-}
+            .testimonial-card {
+                max-width: 100%;
+            }
+        }
 
-@media (max-width: 480px) {
-    .section-heading {
-        font-size: 1.5rem; /* 24px */
-    }
+        @media (max-width: 480px) {
+            .section-heading {
+                font-size: 1.5rem;
+                /* 24px */
+            }
 
-    .section-text {
-        font-size: 0.875rem; /* 14px */
-    }
+            .section-text {
+                font-size: 0.875rem;
+                /* 14px */
+            }
 
-    .testimonial-header h2 {
-        font-size: 1.5rem; /* 24px */
-    }
+            .testimonial-header h2 {
+                font-size: 1.5rem;
+                /* 24px */
+            }
 
-    .testimonial-card {
-        padding: 15px;
-    }
+            .testimonial-card {
+                padding: 15px;
+            }
 
-    .testimonial-card img {
-        width: 60px;
-        height: 60px;
-    }
+            .testimonial-card img {
+                width: 60px;
+                height: 60px;
+            }
 
-    .testimonial-card h5, .testimonial-card p {
-        font-size: 0.75rem; /* 12px */
-    }
-}
-
+            .testimonial-card h5,
+            .testimonial-card p {
+                font-size: 0.75rem;
+                /* 12px */
+            }
+        }
     </style>
 
     <!-- top banner -->
@@ -212,8 +224,7 @@
                     <li><a href="#" class="hover-link">Solutions</a></li>
                     <li><a href="#" class="hover-link">Pricing</a></li>
                     <li><a href="#" class="hover-link">Resources</a></li>
-                    <li><a href="#" class="hover-link secondary-button">Sign in</a></li>
-                    <li><a href="#" class="hover-link primary-button">Sign up</a></li>
+                    <li><a href="#" class="hover-link secondary-button">Contact </a></li>
                 </ul>
             </div>
             <a href="#" class="nav-toggle hover-link" id="nav-toggle">
@@ -222,18 +233,27 @@
         </div>
     </nav>
 
+    <section class="welcome-section">
+        <div class="container">
+            <h1 class="welcome-message">Welcome to Genious Solar Services</h1>
+            <p class="typewriter-text">Providing Innovative Solar Solutions for Your Needs</p>
+        </div>
+    </section>
+
     <!-- header section -->
     <header>
         <div class="container header-section flex">
             <div class="header-left">
-                <h1>Power Your Home with Solar</h1>
+                <h1>Genius Solar Services</h1>
                 <p>Discover how Solar Solutions can help you harness the power of the sun to reduce energy costs and
                     protect the environment.</p>
                 <a href="#" class="primary-button get-started-btn">Get Started</a>
             </div>
             <div class="header-right">
-                <!-- <img src="./assets/asset 2.png" alt="hero image"> -->
-                <video src="assets/media1.mp4" autoplay loop></video>
+                <video id="headerVideo" autoplay muted loop>
+                    <source src="assets/media1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
     </header>
@@ -301,82 +321,82 @@
                 <div class="about-us-details">
                     <!-- Photo of Dhirendra on the left -->
                     <div class="about-photo">
-                        <img src="assets/dhirendra_bandil.png" alt="Dhirendra Bandil" class="cutout-image">
+                        <img src="assets/dh.png" alt="Dhirendra Bandil" class="cutout-image" style="width: 8rem;">
                     </div>
                     <!-- Text on the right -->
-                    <div class="about-text">
-                        <p class="section-text">With over 25 years of experience in the service industry, Genious Solar
+                    <div class="about-text" style="text-align: justify;">
+                        <p class="section-text">With over 25 years of experience in the service industry, Genius Solar
                             Services has established itself as a leader in providing exceptional solutions for water
                             purifiers. Our deep-rooted commitment to quality and customer satisfaction distinguishes us
                             in the market.</p>
                         <p class="section-text">Our expertise extends to offering top-notch solar solutions, making us a
                             trusted partner for solar panel installations and maintenance. We are dedicated to
                             delivering unparalleled service and support to all our clients.</p>
-                        <p class="section-text">At Genious Solar Services, we blend experience with innovation to meet
+                        <p class="section-text">At Genius Solar Services, we blend experience with innovation to meet
                             your solar and water purification needs effectively. Trust us to guide you through your
                             energy transition with professionalism and expertise.</p>
                     </div>
                 </div>
-                <p class="section-text">We are authorized dealers of Luminous Solar.</p>
+                <p class="section-text" style="text-align: center;"><i>We are authorized dealers of Luminous Solar.</i>
+                </p>
                 <img src="assets/companies/luminous.webp" alt="Luminous Solar Logo" class="luminous-logo">
             </div>
 
             <!-- What Are We Section -->
             <div class="section-content">
                 <h2 class="section-heading">What Are We?</h2>
-                <p class="section-text">Genious Solar Services specializes in the installation of high-quality solar
-                    panels from top brands such as Adani, Havells, and Luminous. Our extensive experience in the solar
-                    industry ensures that we provide reliable and efficient solutions tailored to your needs.</p>
-                <p class="section-text">We take pride in our ability to handle installations for a wide range of solar
-                    products, delivering exceptional results and maximum energy savings. Our team of experts is
-                    dedicated to helping you transition to clean and sustainable solar energy.</p>
-                <p class="section-text">From assessing your solar needs to completing the installation process, we are
-                    committed to offering comprehensive services that exceed your expectations. Explore our diverse
-                    range of solar panel options and let us help you find the perfect fit for your home or business.</p>
-                <p class="section-text">Choose Genious Solar Services for a seamless and efficient solar experience, and
-                    enjoy the benefits of renewable energy for years to come.</p>
-                <div class="brands-wrapper">
-                    <img src="assets/companies/adani.jpg" alt="Adani" class="brand-logo">
-                    <img src="assets/companies/havells.jpg" alt="Havells" class="brand-logo">
-                    <img src="assets/companies/panasonic.webp" alt="Panasonic" class="brand-logo">
+                <div style="text-align: justify;">
+                    <p class="section-text">Genius Solar Services specializes in the installation of high-quality solar
+                        panels from top brands such as Adani, Havells, and Luminous. Our extensive experience in the
+                        solar industry ensures that we provide reliable and efficient solutions tailored to your needs.
+                    </p>
+                    <p class="section-text">We take pride in our ability to handle installations for a wide range of
+                        solar products, delivering exceptional results and maximum energy savings. Our team of experts
+                        is dedicated to helping you transition to clean and sustainable solar energy.</p>
+                    <p class="section-text">From assessing your solar needs to completing the installation process, we
+                        are committed to offering comprehensive services that exceed your expectations. Explore our
+                        diverse range of solar panel options and let us help you find the perfect fit for your home or
+                        business.</p>
+                    <p class="section-text">Choose Genius Solar Services for a seamless and efficient solar experience,
+                        and enjoy the benefits of renewable energy for years to come.</p>
+                    <div class="brands-wrapper" style="text-align: center;">
+                        <img src="assets/companies/adani.jpg" alt="Adani" class="brand-logo">
+                        <img src="assets/companies/havells.jpg" alt="Havells" class="brand-logo">
+                    </div>
                 </div>
             </div>
 
             <!-- Our Goal Section -->
             <div class="section-content">
                 <h2 class="section-heading">Our Goal</h2>
-                <p class="section-text">Our primary goal is to provide our clients with the best possible solar
-                    solutions that meet their energy needs while maximizing cost savings. We strive to make solar energy
-                    accessible and affordable for everyone, ensuring a positive impact on both the environment and our
-                    clients’ finances.</p>
-                <p class="section-text">We aim to continuously improve our services and stay at the forefront of solar
-                    technology advancements. By doing so, we ensure that our clients benefit from the latest innovations
-                    and achieve optimal energy efficiency.</p>
-                <p class="section-text">Our commitment to excellence is reflected in our personalized approach, where we
-                    work closely with each client to tailor solutions that align with their specific requirements and
-                    goals.</p>
-                <p class="section-text">At Genious Solar Services, we envision a future where sustainable energy
-                    solutions are the norm, and we are dedicated to playing a pivotal role in making that vision a
-                    reality.</p>
+                <div class="about-us-details">
+                    <!-- Text on the left -->
+                    <div class="about-text" style="text-align: justify;">
+                        <p class="section-text">Our primary goal is to provide our clients with the best possible solar
+                            solutions that meet their energy needs while maximizing cost savings. We strive to make
+                            solar energy accessible and affordable for everyone, ensuring a positive impact on both the
+                            environment and our clients’ finances.</p>
+                        <p class="section-text">We aim to continuously improve our services and stay at the forefront of
+                            solar technology advancements. By doing so, we ensure that our clients benefit from the
+                            latest innovations and achieve optimal energy efficiency.</p>
+                        <p class="section-text">Our commitment to excellence is reflected in our personalized approach,
+                            where we work closely with each client to tailor solutions that align with their specific
+                            requirements and goals.</p>
+                        <p class="section-text">At Genious Solar Services, we envision a future where sustainable energy
+                            solutions are the norm, and we are dedicated to playing a pivotal role in making that vision
+                            a reality.</p>
+                    </div>
+                    <!-- Photo on the right -->
+                    <div class="about-photo">
+                        <img src="assets/asset 40.jpeg" alt="Dhirendra Bandil" class="cutout-image"
+                            style="width: 23rem;">
+                    </div>
+                </div>
             </div>
+
         </div>
     </section>
 
-
-    <!-- other features section -->
-
-    <!-- <section class="big-feature-section">
-        <div class="container flex big-feature-container">
-            <div class="feature-img">
-                <img src="./assets/asset 18.png" alt="">
-            </div>
-            <div class="feature-desc flex">
-                <h4>Solar Solutions for</h4>
-                <h3>Homeowners</h3>
-                <p>Transform your home into an eco-friendly powerhouse with our tailored solar solutions.</p>
-            </div>
-        </div>
-    </section> -->
 
     <section class="big-feature-section">
         <div class="container flex big-feature-container">
@@ -433,43 +453,16 @@
         <div class="container flex cta-section-container">
             <h2>Start Your Solar Journey Today</h2>
             <p>Switch to solar and take control of your energy future.</p>
-            <a href="#" class="primary-button">Get Started</a>
+            <a href="#" class="primary-button">Contact Us</a>
+        </div>
+        <div>
+
         </div>
     </section>
 
-    <!-- footer -->
 
-    <footer>
-        <div class="container flex footer-container">
-            <a href="#" class="company-logo">
-                <img src="./assets/asset 1.png" alt="company logo">
-            </a>
-            <div class="link-column flex">
-                <h4>Product</h4>
-                <a href="#" class="hover-link">Overview</a>
-                <a href="#" class="hover-link">Pricing</a>
-                <a href="#" class="hover-link">Solar Panels</a>
-                <a href="#" class="hover-link">Installation</a>
-                <a href="#" class="hover-link">Support</a>
-            </div>
-            <div class="link-column flex">
-                <h4>Solutions</h4>
-                <a href="#" class="hover-link">Home</a>
-                <a href="#" class="hover-link">Business</a>
-                <a href="#" class="hover-link">Industrial</a>
-                <a href="#" class="hover-link">Government</a>
-                <a href="#" class="hover-link">Agriculture</a>
-            </div>
-            <div class="link-column flex">
-                <h4>Resources</h4>
-                <a href="#" class="hover-link">Blog</a>
-                <a href="#" class="hover-link">FAQs</a>
-                <a href="#" class="hover-link">Case Studies</a>
-                <a href="#" class="hover-link">Contact Us</a>
-                <a href="#" class="hover-link">Customer Support</a>
-            </div>
-        </div>
-    </footer>
+
+
 
     <!-- subfooter -->
 
@@ -483,18 +476,104 @@
         </div>
     </div>
 
-    <script src="https://kit.fontawesome.com/c1fc3d2826.js" crossorigin="anonymous"></script>
 
-    <script>
-        const toggleButton = document.getElementById('nav-toggle');
-        const navLinks = document.getElementById('nav-links');
 
-        toggleButton.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        })
-
-    </script>
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Scroll to Top">
+        ⬆️
+    </button>
 
 </body>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    
+<script src="https://kit.fontawesome.com/c1fc3d2826.js" crossorigin="anonymous"></script>
+<script>
+    const toggleButton = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggleButton.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    })
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const textElement = document.querySelector('.typewriter-text');
+        const text = textElement.textContent;
+        textElement.textContent = '';
+        let index = 0;
+
+        function typeWriter() {
+            if (index < text.length) {
+                textElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 100); // Adjust the speed here
+            }
+        }
+
+        typeWriter();
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const video = document.getElementById('headerVideo');
+
+        // Adjust these values as needed
+        const startTime = 1; // Start at 1 second
+        const endTime = video.duration - 1; // End at 1 second before the end
+
+        video.addEventListener('loadedmetadata', () => {
+            video.currentTime = startTime;
+            video.play();
+        });
+
+        video.addEventListener('timeupdate', () => {
+            if (video.currentTime >= endTime) {
+                video.currentTime = startTime;
+            }
+        });
+    });
+
+    // Get the button
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+    // Show or hide the button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) { // Show button when scrolled more than 300px
+            scrollToTopBtn.classList.add('show');
+        } else {
+            scrollToTopBtn.classList.remove('show');
+        }
+    });
+
+    // Smooth scroll to the top
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    //map
+    function initMap() {
+    // The location of your place
+    const location = { lat: -34.397, lng: 150.644 };
+    
+    // Create a map centered on the location
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 8,
+        center: location,
+    });
+    
+    // Add a marker at the location
+    new google.maps.Marker({
+        position: location,
+        map: map,
+    });
+}
+
+// Initialize the map after the window loads
+window.onload = initMap;
+//map
+
+</script>
 
 </html>
