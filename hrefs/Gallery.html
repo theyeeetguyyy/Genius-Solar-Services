@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genius Solar Services</title>
+    <meta name="description"
+        content="Genius Solar Services offers over 25 years of experience in water purifier services and solar solutions. We provide top-quality installation and maintenance services for solar panels from leading brands like Adani, Havells, and Luminous.">
+    <meta name="keywords"
+        content="solar solutions, solar panels, installation services, Adani, Havells, Luminous, water purifiers, solar energy, renewable energy, solar installation">
+    <meta name="author" content="Genius Solar Services">
+    <meta property="og:title" content="Genius Solar Services - Leading Solar Solutions Provider">
+    <meta property="og:description"
+        content="Expert solar solutions with over 25 years of experience. Offering high-quality installation and maintenance for top solar panel brands.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.6/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../media-queries.css">
+
+<style>.carousel-section {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+</style>
+</head>
+
+<body>
+
+    <style>
+        /* General Styles */
+        .about-us-section,
+        .testimonial-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .section-content {
+            margin-bottom: 40px;
+        }
+
+        .section-heading {
+            font-size: 2.25rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .section-text {
+            font-size: 1.125rem;
+            /* 18px */
+            margin-bottom: 10px;
+        }
+
+        .cutout-image,
+        .luminous-logo {
+            width: auto;
+            height: auto;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .about-us-details {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .about-photo {
+            flex: 1;
+            max-width: 200px;
+        }
+
+        .about-text {
+            flex: 2;
+            text-align: left;
+        }
+
+        /* Testimonial Section */
+        .testimonial-section {
+            background-color: #f4f4f4;
+            padding: 50px 0;
+        }
+
+        .testimonial-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .testimonial-header h2 {
+            font-size: 2rem;
+            /* 32px */
+            margin-bottom: 20px;
+        }
+
+        .testimonial-area {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 10px 17px rgba(0, 0, 0, 0.4);
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+        }
+
+        .testimonial-card img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-card h5 {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-card p {
+            font-size: 0.875rem;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-card .name {
+            font-size: 0.875rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .section-heading {
+                font-size: 1.875rem;
+                /* 30px */
+            }
+
+            .section-text {
+                font-size: 1rem;
+                /* 16px */
+            }
+
+            .about-us-details {
+                flex-direction: column;
+            }
+
+            .about-photo {
+                max-width: 150px;
+            }
+
+            .about-text {
+                text-align: center;
+            }
+
+            .testimonial-area {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .testimonial-card {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-heading {
+                font-size: 1.5rem;
+                /* 24px */
+            }
+
+            .section-text {
+                font-size: 0.875rem;
+                /* 14px */
+            }
+
+            .testimonial-header h2 {
+                font-size: 1.5rem;
+                /* 24px */
+            }
+
+            .testimonial-card {
+                padding: 15px;
+            }
+
+            .testimonial-card img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .testimonial-card h5,
+            .testimonial-card p {
+                font-size: 0.75rem;
+                /* 12px */
+            }
+        }
+    </style>
+
+    <!-- top banner -->
+
+    <div class="top-banner">
+        <div class="container">
+            <div class="small-bold-text banner-text">🌞 Join the Solar Revolution: Power Your Future with Clean Energy
+            </div>
+        </div>
+    </div>
+
+    <!-- nav bar -->
+    <nav>
+        <div class="container main-nav flex" style="z-index: 100;">
+            <a href="#" class="company-logo">
+                <img src="../assets/asset 1.png" alt="company logo">
+            </a>
+            <div class="nav-links" id="nav-links">
+                <ul class="flex">
+                    <li><a href="#" class="hover-link">Products</a></li>
+                    <li><a href="ongrid.html" class="hover-link">On-Grid</a></li>
+                    <li><a href="offgrid.html" class="hover-link">Off-Grid</a></li>
+                    <li><a href="Gallery.html" class="hover-link">Gallery</a></li>
+                    <li><a href="https://wa.me/+9826712299" class="hover-link secondary-button">
+                            <i class="fab fa-whatsapp"></i> Contact Us</a></li>
+
+
+                </ul>
+            </div>
+            <a href="#" class="nav-toggle hover-link" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </div>
+    </nav>
+
+    <section class="welcome-section">
+        <div class="container">
+            <h1 class="welcome-message" style="color: white;">Welcome to Genius Solar Services</h1>
+            <p class="typewriter-text" style="color: white; z-index: 0;">Providing Innovative Solar Solutions for Your
+                Needs</p>
+        </div>
+    </section>
+    <!--  -->
+
+    <!-- Gallery Section -->
+<section class="carousel-section">
+    <div class="container">
+        <h2>Our Gallery</h2>
+        <div class="carousel">
+            <div class="carousel-inner" style="max-width: 50%; margin-left: 27%;">
+                <div class="carousel-item active">
+                    <img src="../assets/gallery/0.jfif " alt="Gallery Photo 1">
+                </div>                 <div class="carousel-item active">
+                    <img src="../assets/gallery/1.jfif " alt="Gallery Photo 1">
+                </div>                 <div class="carousel-item active">
+                    <img src="../assets/gallery/2.jfif " alt="Gallery Photo 1">
+                </div>                 <div class="carousel-item active">
+                    <img src="../assets/gallery/3.jfif " alt="Gallery Photo 1">
+                </div>                 <div class="carousel-item active">
+                    <img src="../assets/gallery/4.jfif " alt="Gallery Photo 1">
+                </div>                <div class="carousel-item active">
+                    <img src="../assets/gallery/5.jfif " alt="Gallery Photo 1">
+                </div>                </div>                <div class="carousel-item active">
+                    <img src="../assets/gallery/6.jfif " alt="Gallery Photo 1">
+                </div>
+
+                <!-- Add more items as needed -->
+            </div>
+            <button class="carousel-control prev" onclick="prevSlide()">❮</button>
+            <button class="carousel-control next" onclick="nextSlide()">❯</button>
+        </div>
+    </div>
+</section>
+
+    
+    <!-- cta section -->
+
+    <section class="cta-section">
+        <div class="container flex cta-section-container">
+            <h2 style="color: white">Start Your Solar Journey Today</h2>
+            <p>Switch to solar and take control of your energy future.</p>
+            <a href="https://wa.me/+9826712299" class="primary-button"><i class="fab fa-whatsapp"></i> Contact Us</a>
+
+        </div>
+
+        <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <div style="flex: 1; text-align: center;">
+                <p>Contact us:<br>Mr. Dhirendra Bandil</p>
+            </div>
+
+            <div style="flex: 1; text-align: center;">
+                <p>Address<br>G-1 Swarna Palace Plot no. 1108 Scheme number 114 Part 1 Vijay Nagar Indore</p>
+            </div>
+
+            <div style="flex: 1; text-align: center;">
+                <p>Phone No.<br>+91 9826712299</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <iframe
+                src="https://www.google.com/maps?q=G-1+Swarna+Palace+Plot+no.+1108+Scheme+number+114+Part+1+Vijay+Nagar+Indore&output=embed"
+                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- subfooter -->
+
+    <div class="subfooter" style="z-index: 100;">
+        <div class="container flex subfooter-container">
+            <a class="hover-link" href="#">Privacy Policy</a>
+            <a class="hover-link" href="#">Terms & Conditions</a>
+            <a class="hover-link" href="#">Security Information</a>
+            <a class="hover-link" href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a class="hover-link" href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a class="hover-link" href="https://wa.me/+9826712299"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Scroll to Top" style="z-index: 1001;">
+        ⬆
+    </button>
+
+</body>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+<script src="https://kit.fontawesome.com/c1fc3d2826.js" crossorigin="anonymous"></script>
+<script>
+    const toggleButton = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggleButton.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    })
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const textElement = document.querySelector('.typewriter-text');
+        const text = textElement.textContent;
+        textElement.textContent = '';
+        let index = 0;
+
+        function typeWriter() {
+            if (index < text.length) {
+                textElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 100); // Adjust the speed here
+            }
+        }
+
+        typeWriter();
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const video = document.getElementById('headerVideo');
+
+        // Adjust these values as needed
+        const startTime = 1; // Start at 1 second
+        const endTime = video.duration - 1; // End at 1 second before the end
+
+        video.addEventListener('loadedmetadata', () => {
+            video.currentTime = startTime;
+            video.play();
+        });
+
+        video.addEventListener('timeupdate', () => {
+            if (video.currentTime >= endTime) {
+                video.currentTime = startTime;
+            }
+        });
+    });
+
+    // Get the button
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+    // Show or hide the button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) { // Show button when scrolled more than 300px
+            scrollToTopBtn.classList.add('show');
+        } else {
+            scrollToTopBtn.classList.remove('show');
+        }
+    });
+
+    // Smooth scroll to the top
+    scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    //map
+    function initMap() {
+        // The location of your place
+        const location = { lat: -34.397, lng: 150.644 };
+
+        // Create a map centered on the location
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 8,
+            center: location,
+        });
+
+        // Add a marker at the location
+        new google.maps.Marker({
+            position: location,
+            map: map,
+        });
+    }
+
+    // Initialize the map after the window loads
+    window.onload = initMap;
+    //map
+
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        const slides = document.querySelectorAll('.carousel-item');
+        if (index >= slides.length) currentSlide = 0;
+        if (index < 0) currentSlide = slides.length - 1;
+
+        slides.forEach((slide, i) => {
+            slide.style.transform = `translateX(${(i - currentSlide) * 100}%)`;
+        });
+    }
+
+    function nextSlide() {
+        currentSlide++;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide--;
+        showSlide(currentSlide);
+    }
+
+    // Initial display
+    showSlide(currentSlide);
+
+
+</script>
+
+</html>
