@@ -14,8 +14,6 @@
     <meta property="og:title" content="Genious Solar Services - Leading Solar Solutions Provider">
     <meta property="og:description"
         content="Expert solar solutions with over 25 years of experience. Offering high-quality installation and maintenance for top solar panel brands.">
-    <!-- <meta property="og:image" content="assets/your-og-image.jpg"> Replace with your actual image path
-    <meta property="og:url" content="https://yourwebsite.com"> Replace with your actual URL -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.6/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media-queries.css">
@@ -37,7 +35,6 @@
 
         .section-heading {
             font-size: 2.25rem;
-            /* 36px */
             margin-bottom: 20px;
             font-weight: bold;
         }
@@ -224,7 +221,10 @@
                     <li><a href="#" class="hover-link">Solutions</a></li>
                     <li><a href="#" class="hover-link">Pricing</a></li>
                     <li><a href="#" class="hover-link">Resources</a></li>
-                    <li><a href="#" class="hover-link secondary-button">Contact </a></li>
+                    <li><a href="https://wa.me/+9826712299" class="hover-link secondary-button">
+                                <i class="fab fa-whatsapp"></i> Contact Us</a></li>
+
+                                
                 </ul>
             </div>
             <a href="#" class="nav-toggle hover-link" id="nav-toggle">
@@ -235,8 +235,8 @@
 
     <section class="welcome-section">
         <div class="container">
-            <h1 class="welcome-message">Welcome to Genious Solar Services</h1>
-            <p class="typewriter-text">Providing Innovative Solar Solutions for Your Needs</p>
+            <h1 class="welcome-message" style="color: white;">Welcome to Genious Solar Services</h1>
+            <p class="typewriter-text" style="color: #299;">Providing Innovative Solar Solutions for Your Needs</p>
         </div>
     </section>
 
@@ -252,7 +252,6 @@
             <div class="header-right">
                 <video id="headerVideo" autoplay muted loop>
                     <source src="assets/media1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
                 </video>
             </div>
         </div>
@@ -404,7 +403,7 @@
                 <a href="https://www.pmsuryaghar.gov.in/"><img src="./assets/govtScheme.jpg"
                         alt="Government Subsidy"></a>
             </div>
-            <div class="feature-desc flex">
+            <div class="feature-desc flex" style="text-align: left;">
                 <h2>Government Subsidies</h2>
                 <h3>for Solar Installations</h3><br>
                 <p>Take advantage of government subsidies to reduce the cost of installing solar panels. Save money
@@ -451,9 +450,9 @@
 
     <section class="cta-section">
         <div class="container flex cta-section-container">
-            <h2>Start Your Solar Journey Today</h2>
+            <h2 style="color: white">Start Your Solar Journey Today</h2>
             <p>Switch to solar and take control of your energy future.</p>
-            <a href="#" class="primary-button">Contact Us</a>
+            <a href="https://wa.me/+9826712299" class="primary-button">Contact Us</a>
         </div>
         <div>
 
@@ -473,6 +472,7 @@
             <a class="hover-link" href="#">Security Information</a>
             <a class="hover-link" href="#"><i class="fa-brands fa-facebook"></i></a>
             <a class="hover-link" href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a class="hover-link" href="https://wa.me/+9826712299"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
     </div>
 
@@ -480,13 +480,13 @@
 
     <!-- Scroll to Top Button -->
     <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Scroll to Top">
-        ⬆️
+        ⬆
     </button>
 
 </body>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
-    
+
 <script src="https://kit.fontawesome.com/c1fc3d2826.js" crossorigin="anonymous"></script>
 <script>
     const toggleButton = document.getElementById('nav-toggle');
@@ -554,25 +554,25 @@
 
     //map
     function initMap() {
-    // The location of your place
-    const location = { lat: -34.397, lng: 150.644 };
-    
-    // Create a map centered on the location
-    const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 8,
-        center: location,
-    });
-    
-    // Add a marker at the location
-    new google.maps.Marker({
-        position: location,
-        map: map,
-    });
-}
+        // The location of your place
+        const location = { lat: -34.397, lng: 150.644 };
 
-// Initialize the map after the window loads
-window.onload = initMap;
-//map
+        // Create a map centered on the location
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 8,
+            center: location,
+        });
+
+        // Add a marker at the location
+        new google.maps.Marker({
+            position: location,
+            map: map,
+        });
+    }
+
+    // Initialize the map after the window loads
+    window.onload = initMap;
+    //map
 
 </script>
 
