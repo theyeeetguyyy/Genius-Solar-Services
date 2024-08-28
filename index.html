@@ -103,7 +103,7 @@
             background: white;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 17px rgba(0, 0, 0, 0.4);
             flex: 1;
             min-width: 250px;
             max-width: 350px;
@@ -211,7 +211,7 @@
 
     <!-- nav bar -->
     <nav>
-        <div class="container main-nav flex">
+        <div class="container main-nav flex" style="z-index: 100;">
             <a href="#" class="company-logo">
                 <img src="./assets/asset 1.png" alt="company logo">
             </a>
@@ -222,9 +222,9 @@
                     <li><a href="#" class="hover-link">Pricing</a></li>
                     <li><a href="#" class="hover-link">Resources</a></li>
                     <li><a href="https://wa.me/+9826712299" class="hover-link secondary-button">
-                                <i class="fab fa-whatsapp"></i> Contact Us</a></li>
+                            <i class="fab fa-whatsapp"></i> Contact Us</a></li>
 
-                                
+
                 </ul>
             </div>
             <a href="#" class="nav-toggle hover-link" id="nav-toggle">
@@ -236,7 +236,8 @@
     <section class="welcome-section">
         <div class="container">
             <h1 class="welcome-message" style="color: white;">Welcome to Genious Solar Services</h1>
-            <p class="typewriter-text" style="color: #299;">Providing Innovative Solar Solutions for Your Needs</p>
+            <p class="typewriter-text" style="color: #299; z-index: 0;">Providing Innovative Solar Solutions for Your
+                Needs</p>
         </div>
     </section>
 
@@ -266,44 +267,37 @@
         <div class="container">
             <div class="features-header">
                 <h2 class="features-heading-text">Your Complete Solar Power Toolkit</h2>
-                <a href="#" class="secondary-button">See all features <i class="fa-solid fa-right-long"></i></a>
             </div>
             <div class="features-area flex">
                 <div class="features-card flex">
                     <img src="./assets/asset 11.svg" alt="">
                     <h3>Solar Panels</h3>
                     <p>High-efficiency solar panels to maximize energy output.</p>
-                    <a href="#" class="secondary-button">Learn More <i class="fa-solid fa-right-long"></i></a>
                 </div>
                 <div class="features-card flex">
                     <img src="./assets/asset 13.svg" alt="">
                     <h3>Inverters</h3>
                     <p>Convert solar energy into usable electricity efficiently.</p>
-                    <a href="#" class="secondary-button">Learn more <i class="fa-solid fa-right-long"></i></a>
                 </div>
                 <div class="features-card flex">
                     <img src="./assets/asset 14.svg" alt="">
                     <h3>Battery Storage</h3>
                     <p>Store excess energy for use when you need it most.</p>
-                    <a href="#" class="secondary-button">Learn more <i class="fa-solid fa-right-long"></i></a>
                 </div>
                 <div class="features-card flex">
                     <img src="./assets/asset 15.svg" alt="">
                     <h3>Monitoring Systems</h3>
                     <p>Track your energy production and consumption in real-time.</p>
-                    <a href="#" class="secondary-button">Learn more <i class="fa-solid fa-right-long"></i></a>
                 </div>
                 <div class="features-card flex">
                     <img src="./assets/asset 16.svg" alt="">
                     <h3>Installation Services</h3>
                     <p>Expert installation to ensure optimal performance.</p>
-                    <a href="#" class="secondary-button">Learn more <i class="fa-solid fa-right-long"></i></a>
                 </div>
                 <div class="features-card flex">
                     <img src="./assets/asset 17.svg" alt="">
                     <h3>Maintenance</h3>
                     <p>Keep your system running smoothly with regular check-ups.</p>
-                    <a href="#" class="secondary-button">Learn more <i class="fa-solid fa-right-long"></i></a>
                 </div>
             </div>
         </div>
@@ -314,53 +308,76 @@
     <!-- About Us Section -->
     <section class="about-us-section">
         <div class="container">
+
             <!-- Who Are We Section -->
             <div class="section-content">
                 <h2 class="section-heading">Who Are We?</h2>
                 <div class="about-us-details">
                     <!-- Photo of Dhirendra on the left -->
                     <div class="about-photo">
-                        <img src="assets/dh.png" alt="Dhirendra Bandil" class="cutout-image" style="width: 8rem;">
+                        <img src="assets/dh.png" alt="Dhirendra Bandil" class="cutout-image" style="width: 10rem;"><br>
+                        <p>Mr. Dhirendra Bandil, CEO</p>
                     </div>
                     <!-- Text on the right -->
                     <div class="about-text" style="text-align: justify;">
-                        <p class="section-text">With over 25 years of experience in the service industry, Genius Solar
-                            Services has established itself as a leader in providing exceptional solutions for water
-                            purifiers. Our deep-rooted commitment to quality and customer satisfaction distinguishes us
-                            in the market.</p>
-                        <p class="section-text">Our expertise extends to offering top-notch solar solutions, making us a
-                            trusted partner for solar panel installations and maintenance. We are dedicated to
-                            delivering unparalleled service and support to all our clients.</p>
-                        <p class="section-text">At Genius Solar Services, we blend experience with innovation to meet
-                            your solar and water purification needs effectively. Trust us to guide you through your
-                            energy transition with professionalism and expertise.</p>
+                        <p class="section-text">With over 25 years of experience, Genius Solar Services leads in
+                            providing top solutions for water purifiers, known for quality and customer satisfaction.
+                        </p>
+                        <p class="section-text">Our expertise in solar solutions makes us a trusted partner for solar
+                            panel installations and maintenance, delivering exceptional service and support.</p>
+                        <p class="section-text">We blend experience with innovation to meet your solar and water
+                            purification needs. Trust us to guide your energy transition with professionalism.</p>
                     </div>
                 </div>
                 <p class="section-text" style="text-align: center;"><i>We are authorized dealers of Luminous Solar.</i>
                 </p>
-                <img src="assets/companies/luminous.webp" alt="Luminous Solar Logo" class="luminous-logo">
+                <img src="assets/companies/luminous.webp" alt="Luminous Solar Logo" class="luminous-logo"
+                    style="width: 12rem;">
+                <p class="section-text" style="text-align: center;"><i>Top brands with finest quality delivered.</i></p>
+                <div class="brands-wrapper" style="text-align: center;">
+                    <img src="assets/companies/adani.jpg" alt="Adani" class="brand-logo" style="width: 10rem;">
+                    <img src="assets/companies/havells.jpg" alt="Havells" class="brand-logo" style="width: 10rem;">
+                </div>
             </div>
+
 
             <!-- What Are We Section -->
             <div class="section-content">
                 <h2 class="section-heading">What Are We?</h2>
-                <div style="text-align: justify;">
-                    <p class="section-text">Genius Solar Services specializes in the installation of high-quality solar
-                        panels from top brands such as Adani, Havells, and Luminous. Our extensive experience in the
-                        solar industry ensures that we provide reliable and efficient solutions tailored to your needs.
-                    </p>
-                    <p class="section-text">We take pride in our ability to handle installations for a wide range of
-                        solar products, delivering exceptional results and maximum energy savings. Our team of experts
-                        is dedicated to helping you transition to clean and sustainable solar energy.</p>
-                    <p class="section-text">From assessing your solar needs to completing the installation process, we
-                        are committed to offering comprehensive services that exceed your expectations. Explore our
-                        diverse range of solar panel options and let us help you find the perfect fit for your home or
-                        business.</p>
-                    <p class="section-text">Choose Genius Solar Services for a seamless and efficient solar experience,
-                        and enjoy the benefits of renewable energy for years to come.</p>
-                    <div class="brands-wrapper" style="text-align: center;">
-                        <img src="assets/companies/adani.jpg" alt="Adani" class="brand-logo">
-                        <img src="assets/companies/havells.jpg" alt="Havells" class="brand-logo">
+                <div class="content-wrapper">
+                    <!-- Image Grid -->
+                    <div class="image-grid">
+                        <!-- <div class="image-wrapper">
+                            <img src="assets/i1.jpg" alt="Image 1">
+                        </div> -->
+                        <div class="image-wrapper">
+                            <img src="assets/i2.jpg" alt="Image 2">
+                        </div>
+                        <div class="image-wrapper">
+                            <img src="assets/i3.jpg" alt="Image 3">
+                        </div>
+                        <!-- <div class="image-wrapper">
+                            <img src="assets/i4.jpg" alt="Image 4">
+                        </div> -->
+                    </div>
+
+                    <!-- Text Content -->
+                    <div class="text-content">
+                        <p class="section-text">Genius Solar Services specializes in the installation of high-quality
+                            solar
+                            panels from top brands such as Adani, Havells, and Luminous. Our extensive experience in the
+                            solar industry ensures that we provide reliable and efficient solutions tailored to your
+                            needs.
+                        </p>
+                        <p class="section-text">From assessing your solar needs to completing the installation process,
+                            we
+                            are committed to offering comprehensive services that exceed your expectations. Explore our
+                            diverse range of solar panel options and let us help you find the perfect fit for your home
+                            or
+                            business.</p>
+                        <p class="section-text">Choose Genius Solar Services for a seamless and efficient solar
+                            experience,
+                            and enjoy the benefits of renewable energy for years to come.</p>
                     </div>
                 </div>
             </div>
@@ -454,8 +471,27 @@
             <p>Switch to solar and take control of your energy future.</p>
             <a href="https://wa.me/+9826712299" class="primary-button">Contact Us</a>
         </div>
-        <div>
 
+        <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <div style="flex: 1; text-align: center;">
+                <p>Contact us:<br>Mr. Dhirendra Bandil</p>
+            </div>
+
+            <div style="flex: 1; text-align: center;">
+                <p>Address<br>G-1 Swarna Palace Plot no. 1108 Scheme number 114 Part 1 Vijay Nagar Indore</p>
+            </div>
+
+            <div style="flex: 1; text-align: center;">
+                <p>Phone No.<br>+91 9826712299</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <iframe
+                src="https://www.google.com/maps?q=G-1+Swarna+Palace+Plot+no.+1108+Scheme+number+114+Part+1+Vijay+Nagar+Indore&output=embed"
+                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
     </section>
 
@@ -463,9 +499,10 @@
 
 
 
+
     <!-- subfooter -->
 
-    <div class="subfooter">
+    <div class="subfooter" style="z-index: 100;">
         <div class="container flex subfooter-container">
             <a class="hover-link" href="#">Privacy Policy</a>
             <a class="hover-link" href="#">Terms & Conditions</a>
@@ -479,7 +516,7 @@
 
 
     <!-- Scroll to Top Button -->
-    <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Scroll to Top">
+    <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Scroll to Top" style="z-index: 1001;">
         ⬆
     </button>
 
