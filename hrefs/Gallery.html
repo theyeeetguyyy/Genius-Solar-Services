@@ -17,235 +17,107 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.6/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../media-queries.css">
+    <style>
+        /* Image Slider */
+        .image-slider {
+            position: relative;
+            overflow: hidden;
+            padding: 20px 0; /* Padding for spacing around the slider */
+        }
+        
+        .slider-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+        
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 0 10px; /* Padding between images */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .slide img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* Ensure the image scales correctly */
+        }
+        
+        /* Navigation Buttons */
+        .slider-button {
+            position: absolute;
+            top: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 100;
+        }
+        
+        .prev {
+            left: 10px;
+        }
+        
+        .next {
+            right: 10px;
+        }
+        
+        /* Pagination Dots */
+        .pagination-dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #bbb;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        
+        .dot.active {
+            background-color: #717171;
+        }
+        
+        /* Media Queries for Different Screen Sizes */
+        @media (min-width: 768px) {
+            .slider-container {
+                padding: 0 20px; /* Adjusted padding for tablets */
+            }
+        
+            .slide {
+                padding: 0 15px; /* Adjusted space between images */
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .slider-container {
+                padding: 0 30px; /* Adjusted padding for desktop screens */
+            }
+        
+            .slide {
+                padding: 0 20px; /* Adjusted space between images */
+            }
+        }
+        </style>
+        
 
-<style>.carousel-section {
-    margin: 40px 0;
-    text-align: center;
-}
-
-.carousel {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
-
-.carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-item {
-    min-width: 100%;
-    box-sizing: border-box;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: auto;
-}
-
-.carousel-control {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 100;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-</style>
 </head>
 
 <body>
-
-    <style>
-        /* General Styles */
-        .about-us-section,
-        .testimonial-section {
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        .section-content {
-            margin-bottom: 40px;
-        }
-
-        .section-heading {
-            font-size: 2.25rem;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-
-        .section-text {
-            font-size: 1.125rem;
-            /* 18px */
-            margin-bottom: 10px;
-        }
-
-        .cutout-image,
-        .luminous-logo {
-            width: auto;
-            height: auto;
-            margin: 20px auto;
-            display: block;
-        }
-
-        .about-us-details {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-
-        .about-photo {
-            flex: 1;
-            max-width: 200px;
-        }
-
-        .about-text {
-            flex: 2;
-            text-align: left;
-        }
-
-        /* Testimonial Section */
-        .testimonial-section {
-            background-color: #f4f4f4;
-            padding: 50px 0;
-        }
-
-        .testimonial-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .testimonial-header h2 {
-            font-size: 2rem;
-            /* 32px */
-            margin-bottom: 20px;
-        }
-
-        .testimonial-area {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .testimonial-card {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 10px 17px rgba(0, 0, 0, 0.4);
-            flex: 1;
-            min-width: 250px;
-            max-width: 350px;
-        }
-
-        .testimonial-card img {
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            margin-bottom: 15px;
-        }
-
-        .testimonial-card h5 {
-            font-size: 1rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .testimonial-card p {
-            font-size: 0.875rem;
-            margin-bottom: 15px;
-        }
-
-        .testimonial-card .name {
-            font-size: 0.875rem;
-            font-weight: bold;
-            color: #333;
-        }
-
-        /* Media Queries */
-        @media (max-width: 768px) {
-            .section-heading {
-                font-size: 1.875rem;
-                /* 30px */
-            }
-
-            .section-text {
-                font-size: 1rem;
-                /* 16px */
-            }
-
-            .about-us-details {
-                flex-direction: column;
-            }
-
-            .about-photo {
-                max-width: 150px;
-            }
-
-            .about-text {
-                text-align: center;
-            }
-
-            .testimonial-area {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .testimonial-card {
-                max-width: 100%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .section-heading {
-                font-size: 1.5rem;
-                /* 24px */
-            }
-
-            .section-text {
-                font-size: 0.875rem;
-                /* 14px */
-            }
-
-            .testimonial-header h2 {
-                font-size: 1.5rem;
-                /* 24px */
-            }
-
-            .testimonial-card {
-                padding: 15px;
-            }
-
-            .testimonial-card img {
-                width: 60px;
-                height: 60px;
-            }
-
-            .testimonial-card h5,
-            .testimonial-card p {
-                font-size: 0.75rem;
-                /* 12px */
-            }
-        }
-    </style>
 
     <!-- top banner -->
 
@@ -259,12 +131,12 @@
     <!-- nav bar -->
     <nav>
         <div class="container main-nav flex" style="z-index: 100;">
-            <a href="#" class="company-logo">
+            <a href="../index.html" class="company-logo">
                 <img src="../assets/asset 1.png" alt="company logo">
             </a>
             <div class="nav-links" id="nav-links">
                 <ul class="flex">
-                    <li><a href="#" class="hover-link">Products</a></li>
+                    <li><a href="../index.html" class="hover-link">Home</a></li>
                     <li><a href="ongrid.html" class="hover-link">On-Grid</a></li>
                     <li><a href="offgrid.html" class="hover-link">Off-Grid</a></li>
                     <li><a href="Gallery.html" class="hover-link">Gallery</a></li>
@@ -287,69 +159,70 @@
                 Needs</p>
         </div>
     </section>
-    <!--  -->
 
-    <!-- Gallery Section -->
-<section class="carousel-section">
-    <div class="container">
-        <h2>Our Gallery</h2>
-        <div class="carousel">
-            <div class="carousel-inner" style="max-width: 50%; margin-left: 27%;">
-                <div class="carousel-item active">
-                    <img src="../assets/gallery/0.jfif " alt="Gallery Photo 1">
-                </div>                 <div class="carousel-item active">
-                    <img src="../assets/gallery/1.jfif " alt="Gallery Photo 1">
-                </div>                 <div class="carousel-item active">
-                    <img src="../assets/gallery/2.jfif " alt="Gallery Photo 1">
-                </div>                 <div class="carousel-item active">
-                    <img src="../assets/gallery/3.jfif " alt="Gallery Photo 1">
-                </div>                 <div class="carousel-item active">
-                    <img src="../assets/gallery/4.jfif " alt="Gallery Photo 1">
-                </div>                <div class="carousel-item active">
-                    <img src="../assets/gallery/5.jfif " alt="Gallery Photo 1">
-                </div>                </div>                <div class="carousel-item active">
-                    <img src="../assets/gallery/6.jfif " alt="Gallery Photo 1">
-                </div>
 
-                <!-- Add more items as needed -->
+<!-- Image Slider -->
+<section class="image-slider" style="padding: 20px 0;">
+    <div class="slider-container">
+        <div class="slider-wrapper">
+            <!-- Slides -->
+            <div class="slide">
+                <img src="../assets/gallery/0.jpg" alt="Slide 1">
             </div>
-            <button class="carousel-control prev" onclick="prevSlide()">❮</button>
-            <button class="carousel-control next" onclick="nextSlide()">❯</button>
+            <div class="slide">
+                <img src="../assets/gallery/1.jfif" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="path/to/your/image3.jpg" alt="Slide 3">
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button class="slider-button prev" aria-label="Previous Slide">&#10094;</button>
+        <button class="slider-button next" aria-label="Next Slide">&#10095;</button>
+
+        <!-- Pagination Dots -->
+        <div class="pagination-dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <!-- Add more dots as needed -->
         </div>
     </div>
 </section>
 
-    
-    <!-- cta section -->
 
+    <!-- cta section -->
     <section class="cta-section">
         <div class="container flex cta-section-container">
             <h2 style="color: white">Start Your Solar Journey Today</h2>
             <p>Switch to solar and take control of your energy future.</p>
-            <a href="https://wa.me/+9826712299" class="primary-button"><i class="fab fa-whatsapp"></i> Contact Us</a>
-
+            <a href="https://wa.me/+9826712299" class="primary-button">
+                <i class="fab fa-whatsapp"></i> Contact Us
+            </a>
         </div>
 
-        <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+        <div class="contact-info-container" style="display: flex; justify-content: space-between; margin-top: 20px;">
             <div style="flex: 1; text-align: center;">
-                <p>Contact us:<br>Mr. Dhirendra Bandil</p>
+                <p>Contact us:<br>Mr. Dhirendra Bandil<br>Proprietor</p>
             </div>
 
             <div style="flex: 1; text-align: center;">
-                <p>Address<br>G-1 Swarna Palace Plot no. 1108 Scheme number 114 Part 1 Vijay Nagar Indore</p>
+                <p>Address<br>G-1 Swarna Palace Plot no. 1108 Scheme number 114 Part 1 Vijay Nagar, Indore, (M.
+                    P.)<br>Pin Code: 452010</p>
             </div>
 
             <div style="flex: 1; text-align: center;">
-                <p>Phone No.<br>+91 9826712299</p>
+                <p>Phone No.<br>Mobile: +91-9826712299, +91-7828812299<br>Landline: 0731-4004499</p>
             </div>
         </div>
 
-        <div style="text-align: center; margin-top: 20px;">
+        <div class="map-container" style="text-align: center; margin-top: 20px;">
             <iframe
-                src="https://www.google.com/maps?q=G-1+Swarna+Palace+Plot+no.+1108+Scheme+number+114+Part+1+Vijay+Nagar+Indore&output=embed"
-                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1839.4697459260192!2d75.8951974!3d22.7676267!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39630388e4cbd12f%3A0xc18593ac51c36209!2sAquaguard%20Service%20Center%20indore%20Genius%20aqua%20services%20authorized%20by%20eureka%20Forbes%20ltd!5e0!3m2!1sen!2sin!4v1724962380920!5m2!1sen!2sin"
+                width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
 
@@ -469,30 +342,48 @@
     window.onload = initMap;
     //map
 
-    let currentSlide = 0;
+    //carousal
+    document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.slide');
+    const nextButton = document.querySelector('.next');
+    const prevButton = document.querySelector('.prev');
+    const dots = document.querySelectorAll('.dot');
+
+    let currentIndex = 0;
 
     function showSlide(index) {
-        const slides = document.querySelectorAll('.carousel-item');
-        if (index >= slides.length) currentSlide = 0;
-        if (index < 0) currentSlide = slides.length - 1;
+        if (index >= slides.length) {
+            currentIndex = 0;
+        } else if (index < 0) {
+            currentIndex = slides.length - 1;
+        } else {
+            currentIndex = index;
+        }
 
-        slides.forEach((slide, i) => {
-            slide.style.transform = `translateX(${(i - currentSlide) * 100}%)`;
+        const offset = -currentIndex * 100;
+        document.querySelector('.slider-wrapper').style.transform = `translateX(${offset}%)`;
+
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[currentIndex].classList.add('active');
+    }
+
+    nextButton.addEventListener('click', () => {
+        showSlide(currentIndex + 1);
+    });
+
+    prevButton.addEventListener('click', () => {
+        showSlide(currentIndex - 1);
+    });
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showSlide(index);
         });
-    }
+    });
 
-    function nextSlide() {
-        currentSlide++;
-        showSlide(currentSlide);
-    }
-
-    function prevSlide() {
-        currentSlide--;
-        showSlide(currentSlide);
-    }
-
-    // Initial display
-    showSlide(currentSlide);
+    // Initialize first slide
+    showSlide(currentIndex);
+});
 
 
 </script>

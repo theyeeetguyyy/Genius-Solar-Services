@@ -111,3 +111,22 @@
         width: 100%;
     }
 }
+@media screen and (max-width: 767px) {
+    .image-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjusts for smaller screens */
+    }
+
+    .image-wrapper {
+        padding-top: 100%; /* Ensures square aspect ratio on smaller screens */
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for very small screens */
+    }
+
+    .image-wrapper {
+        padding-top: 100%; /* Maintains square aspect ratio */
+    }
+}
