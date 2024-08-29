@@ -22,36 +22,39 @@
         .image-slider {
             position: relative;
             overflow: hidden;
-            padding: 20px 0; /* Padding for spacing around the slider */
+            padding: 20px 0;
+            /* Padding for spacing around the slider */
         }
-        
+
         .slider-container {
             position: relative;
             max-width: 100%;
             margin: auto;
             overflow: hidden;
         }
-        
+
         .slider-wrapper {
             display: flex;
             transition: transform 0.5s ease-in-out;
         }
-        
+
         .slide {
             min-width: 100%;
             box-sizing: border-box;
-            padding: 0 10px; /* Padding between images */
+            padding: 0 10px;
+            /* Padding between images */
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        
+
         .slide img {
             max-width: 100%;
             max-height: 100%;
-            object-fit: contain; /* Ensure the image scales correctly */
+            object-fit: contain;
+            /* Ensure the image scales correctly */
         }
-        
+
         /* Navigation Buttons */
         .slider-button {
             position: absolute;
@@ -63,21 +66,21 @@
             cursor: pointer;
             z-index: 100;
         }
-        
+
         .prev {
             left: 10px;
         }
-        
+
         .next {
             right: 10px;
         }
-        
+
         /* Pagination Dots */
         .pagination-dots {
             text-align: center;
             margin-top: 10px;
         }
-        
+
         .dot {
             display: inline-block;
             width: 10px;
@@ -87,33 +90,37 @@
             margin: 0 5px;
             cursor: pointer;
         }
-        
+
         .dot.active {
             background-color: #717171;
         }
-        
+
         /* Media Queries for Different Screen Sizes */
         @media (min-width: 768px) {
             .slider-container {
-                padding: 0 20px; /* Adjusted padding for tablets */
+                padding: 0 20px;
+                /* Adjusted padding for tablets */
             }
-        
+
             .slide {
-                padding: 0 15px; /* Adjusted space between images */
+                padding: 0 15px;
+                /* Adjusted space between images */
             }
         }
-        
+
         @media (min-width: 1024px) {
             .slider-container {
-                padding: 0 30px; /* Adjusted padding for desktop screens */
+                padding: 0 30px;
+                /* Adjusted padding for desktop screens */
             }
-        
+
             .slide {
-                padding: 0 20px; /* Adjusted space between images */
+                padding: 0 20px;
+                /* Adjusted space between images */
             }
         }
-        </style>
-        
+    </style>
+
 
 </head>
 
@@ -161,36 +168,37 @@
     </section>
 
 
-<!-- Image Slider -->
-<section class="image-slider" style="padding: 20px 0;">
-    <div class="slider-container">
-        <div class="slider-wrapper">
-            <!-- Slides -->
-            <div class="slide">
-                <img src="../assets/gallery/0.jpg" alt="Slide 1">
-            </div>
-            <div class="slide">
-                <img src="../assets/gallery/1.jfif" alt="Slide 2">
-            </div>
-            <div class="slide">
-                <img src="path/to/your/image3.jpg" alt="Slide 3">
-            </div>
-            <!-- Add more slides as needed -->
-        </div>
+    <!-- Image Slider -->
+    <section class="image-slider" style="padding: 20px 0;">
+        <div class="slider-container">
+            <div class="slider-wrapper">
+                <!-- Slides -->
+                <div class="slide">
+                    <img src="../assets/gallery/0.jpg" alt="Slide 1">
+                </div>
+                <div class="slide"><img src="../assets/gallery/1.jfif" alt="Slide 2"></div>
+                <div class="slide"><img src="../assets/gallery/3.jfif" alt="Slide 3"></div>
+                <div class="slide"><img src="../assets/gallery/2.jfif" alt="Slide 4"></div>
+                <div class="slide"><img src="../assets/gallery/4.jfif" alt="Slide 5"></div>
+                <div class="slide"><img src="../assets/gallery/5.jfif" alt="Slide 6"></div>
+                <div class="slide"><img src="../assets/gallery/6.jfif" alt="Slide 7"></div>
 
-        <!-- Navigation Buttons -->
-        <button class="slider-button prev" aria-label="Previous Slide">&#10094;</button>
-        <button class="slider-button next" aria-label="Next Slide">&#10095;</button>
+                <!-- Add more slides as needed -->
+            </div>
 
-        <!-- Pagination Dots -->
-        <div class="pagination-dots">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <!-- Add more dots as needed -->
+            <!-- Navigation Buttons -->
+            <button class="slider-button prev" aria-label="Previous Slide">&#10094;</button>
+            <button class="slider-button next" aria-label="Next Slide">&#10095;</button>
+
+            <!-- Pagination Dots -->
+            <div class="pagination-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <!-- Add more dots as needed -->
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
     <!-- cta section -->
@@ -344,46 +352,46 @@
 
     //carousal
     document.addEventListener('DOMContentLoaded', () => {
-    const slides = document.querySelectorAll('.slide');
-    const nextButton = document.querySelector('.next');
-    const prevButton = document.querySelector('.prev');
-    const dots = document.querySelectorAll('.dot');
+        const slides = document.querySelectorAll('.slide');
+        const nextButton = document.querySelector('.next');
+        const prevButton = document.querySelector('.prev');
+        const dots = document.querySelectorAll('.dot');
 
-    let currentIndex = 0;
+        let currentIndex = 0;
 
-    function showSlide(index) {
-        if (index >= slides.length) {
-            currentIndex = 0;
-        } else if (index < 0) {
-            currentIndex = slides.length - 1;
-        } else {
-            currentIndex = index;
+        function showSlide(index) {
+            if (index >= slides.length) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = slides.length - 1;
+            } else {
+                currentIndex = index;
+            }
+
+            const offset = -currentIndex * 100;
+            document.querySelector('.slider-wrapper').style.transform = `translateX(${offset}%)`;
+
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[currentIndex].classList.add('active');
         }
 
-        const offset = -currentIndex * 100;
-        document.querySelector('.slider-wrapper').style.transform = `translateX(${offset}%)`;
-
-        dots.forEach(dot => dot.classList.remove('active'));
-        dots[currentIndex].classList.add('active');
-    }
-
-    nextButton.addEventListener('click', () => {
-        showSlide(currentIndex + 1);
-    });
-
-    prevButton.addEventListener('click', () => {
-        showSlide(currentIndex - 1);
-    });
-
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            showSlide(index);
+        nextButton.addEventListener('click', () => {
+            showSlide(currentIndex + 1);
         });
-    });
 
-    // Initialize first slide
-    showSlide(currentIndex);
-});
+        prevButton.addEventListener('click', () => {
+            showSlide(currentIndex - 1);
+        });
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+            });
+        });
+
+        // Initialize first slide
+        showSlide(currentIndex);
+    });
 
 
 </script>
