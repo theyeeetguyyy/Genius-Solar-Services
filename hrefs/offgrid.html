@@ -51,6 +51,7 @@
     
         .card h3 {
             margin-top: 0;
+            text-align: left;
         }
     
         .benefits-list {
@@ -93,6 +94,12 @@
     
         .faq dd {
             margin-bottom: 10px;
+        }
+        .p{
+            color: #6f6f79;
+        }
+        .li{
+            color: #6f6f79;
         }
     </style>
 </head>
@@ -146,13 +153,13 @@
             <div class="card">
                 <h3>What is an Off-Grid Solar System?</h3>
                 <p>An off-grid solar system, also known as a stand-alone solar system, operates independently of the grid. It functions as a self-contained unit, providing power without relying on external electricity sources. The setup includes:</p>
-                <ul>
-                    <li>Solar panels (modules)</li>
-                    <li>Mounting structures</li>
-                    <li>Batteries</li>
-                    <li>Solar charge controller</li>
-                    <li>Solar inverter</li>
-                    <li>Solar accessories</li>
+                <ul style="color: #6f6f79;text-align: left;font-size: 17px;">
+                    <li>- Solar panels (modules)</li>
+                    <li>- Mounting structures</li>
+                    <li>- Batteries</li>
+                    <li>- Solar charge controller</li>
+                    <li>- Solar inverter</li>
+                    <li>- Solar accessories</li>
                 </ul>
             </div>
         </div>
@@ -176,26 +183,26 @@
                 <p>The charge controller regulates the power coming from the solar panels, managing the flow of electricity to the batteries and the inverter.</p>
             </div>
             <div class="card">
-                <h3>#5. Mounting Structures</h3>
+                <h3 >#5. Mounting Structures</h3>
                 <p>Mounting structures hold the solar panels at the correct angle to maximize sunlight exposure. Proper installation ensures optimal performance.</p>
             </div>
             <div class="card">
                 <h3>#6. Solar Accessories</h3>
                 <p>Additional accessories are necessary for the system’s safety and efficiency, including:</p>
-                <ul class="benefits-list">
-                    <li>DC cables and DC combiner box</li>
-                    <li>AC cables and AC combiner box</li>
-                    <li>MC4 connectors</li>
-                    <li>Earthing strips and conduit trays</li>
-                    <li>Lightning arrester</li>
+                <ul class="benefits-list" style="color: #6f6f79;text-align: left;font-size: 17px;">
+                    <li>- DC cables and DC combiner box</li>
+                    <li>- AC cables and AC combiner box</li>
+                    <li>- MC4 connectors</li>
+                    <li>- Earthing strips and conduit trays</li>
+                    <li>- Lightning arrester</li>
                 </ul>
             </div>
         </div>
 
         <div class="section">
             <h2>Working of an Off-Grid Solar System</h2>
-            <p>The operation of an off-grid solar system is straightforward:</p>
-            <ol>
+            <p style="color: #6f6f79;text-align: left;font-size: 17px;padding-left: 10%;">The operation of an off-grid solar system is straightforward:</p>
+            <ol style="color: #6f6f79;text-align: left;font-size: 17px;padding-left: 10%;">
                 <li>Solar panels convert sunlight into DC electricity.</li>
                 <li>DC current is directed to a combiner box.</li>
                 <li>From the combiner box, the current goes to the charge controller.</li>
@@ -252,26 +259,26 @@
 
         <div class="section">
             <h2>Cost and ROI of an Off-Grid Solar System</h2>
-            <p>The cost of an off-grid solar system ranges from ₹85-100 per watt peak, including batteries. The final price depends on battery backup requirements. Typically, the system breaks even in 6-7 years due to the high cost of batteries.</p>
+            <p style="text-align: justify;">The cost of an off-grid solar system ranges from ₹85-100 per watt peak, including batteries. The final price depends on battery backup requirements. Typically, the system breaks even in 6-7 years due to the high cost of batteries.</p>
         </div>
 
         <div class="section">
-            <h2>Benefits of an Off-Grid Solar System</h2>
-            <ul class="benefits-list">
-                <li>Ideal for locations without grid access.</li>
-                <li>Environmentally friendly with zero pollution.</li>
-                <li>Cost-effective compared to grid electricity over the long term.</li>
+            <h2 >Benefits of an Off-Grid Solar System</h2>
+            <ul class="benefits-list"style="color: #6f6f79;text-align: left;font-size: 17px;">
+                <li>1.Ideal for locations without grid access.</li>
+                <li>2. Environmentally friendly with zero pollution.</li>
+                <li>3. Cost-effective compared to grid electricity over the long term.</li>
             </ul>
         </div>
 
         <div class="section faq">
             <h2>FAQs</h2>
-            <dl>
-                <dt>What is an off-grid solar system?</dt>
+            <dl style="color: #6f6f79;text-align: left;font-size: 17px; padding-left: 7%;">
+                <dt>***What is an off-grid solar system?</dt>
                 <dd>An off-grid solar system, also known as a stand-alone solar system, operates independently of the grid. It converts sunlight into electricity through solar panels, charges batteries, and uses stored energy to power the home.</dd>
-                <dt>What is the drawback of an off-grid solar system?</dt>
+                <dt>***What is the drawback of an off-grid solar system?</dt>
                 <dd>The primary drawback is cost. The price ranges between ₹85-100 per watt peak, and the system typically takes 6-7 years to break even due to the high cost of batteries.</dd>
-                <dt>How does an off-grid solar system work?</dt>
+                <dt>***How does an off-grid solar system work?</dt>
                 <dd>The system absorbs sunlight through solar panels, converts it into DC power, manages the charge with a controller, stores energy in batteries, and then converts it to AC power for home use.</dd>
             </dl>
         </div>
@@ -404,27 +411,27 @@
         });
     });
 
-    //map
-    function initMap() {
-        // The location of your place
-        const location = { lat: -34.397, lng: 150.644 };
+    // //map
+    // function initMap() {
+    //     // The location of your place
+    //     const location = { lat: -34.397, lng: 150.644 };
 
-        // Create a map centered on the location
-        const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 8,
-            center: location,
-        });
+    //     // Create a map centered on the location
+    //     const map = new google.maps.Map(document.getElementById("map"), {
+    //         zoom: 8,
+    //         center: location,
+    //     });
 
-        // Add a marker at the location
-        new google.maps.Marker({
-            position: location,
-            map: map,
-        });
-    }
+    //     // Add a marker at the location
+    //     new google.maps.Marker({
+    //         position: location,
+    //         map: map,
+    //     });
+    // }
 
-    // Initialize the map after the window loads
-    window.onload = initMap;
-    //map
+    // // Initialize the map after the window loads
+    // window.onload = initMap;
+    // //map
 
 </script>
 
