@@ -194,20 +194,48 @@
                 /* 12px */
             }
         }
+
+        /* Loading Screen Styles */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .spinner {
+            border: 5px solid #ddd;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
 
 <body>
-
-
-
-    <!-- top banner -->
-
-    <div class="top-banner">
-        <div class="container">
-            <div class="small-bold-text banner-text">🌞 Join the Solar Revolution: Power Your Future with Clean Energy
-            </div>
-        </div>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        <p>Loading...</p>
     </div>
 
     <!-- nav bar -->
@@ -234,79 +262,28 @@
         </div>
     </nav>
 
+    <!-- Welcome section -->
     <section class="welcome-section">
         <div class="container">
-            <h1 class="welcome-message" style="color: white;">Welcome to Genius Solar Services</h1>
-            <p class="typewriter-text" style="color: white; z-index: 0;">Providing Innovative Solar Solutions for Your
-                Needs</p>
+            <h1 class="typew-message" class="typew-message" style="color: white;">Welcome to Genius Solar Services</h1>
+            <p style="color: white; z-index: 0;"><i>Discover how Solar Solutions can help you<br> harness the power of the sun to reduce energy costs and
+                protect the environment.</i></p><BR>
+            <a href="https://wa.me/+9826712299" class="primary-button" style="max-width: 50%;">
+                <i class="fab fa-whatsapp"></i> Contact Us
+            </a>
         </div>
     </section>
 
-    <!-- header section -->
-    <header>
-        <div class="container header-section flex">
-            <div class="header-left">
-                <h1>Genius Solar Services</h1>
-                <p>Discover how Solar Solutions can help you harness the power of the sun to reduce energy costs and
-                    protect the environment.</p>
-                <a href="https://wa.me/+9826712299" class="primary-button get-started-btn"><i
-                        class="fab fa-whatsapp"></i> Contact Us</a>
-                <!-- <a href="https://wa.me/+9826712299" class="hover-link secondary-button"><i class="fab fa-whatsapp"></i> Contact Us</a> -->
-            </div>
-            <div class="header-right">
-                <video id="headerVideo" autoplay muted loop>
-                    <source src="assets/media1.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-    </header>
-
-
-
-
-    <!-- features section -->
-
-    <section class="features-section">
-        <div class="container">
-            <div class="features-header">
-                <h2 class="features-heading-text">Your Complete Solar Power Toolkit</h2>
-            </div>
-            <div class="features-area flex">
-                <div class="features-card flex">
-                    <img src="./assets/asset 11.svg" alt="">
-                    <h3>Solar Panels</h3>
-                    <p>High-efficiency solar panels to maximize energy output.</p>
-                </div>
-                <div class="features-card flex">
-                    <img src="./assets/asset 13.svg" alt="">
-                    <h3>Inverters</h3>
-                    <p>Convert solar energy into usable electricity efficiently.</p>
-                </div>
-                <div class="features-card flex">
-                    <img src="./assets/asset 14.svg" alt="">
-                    <h3>Battery Storage</h3>
-                    <p>Store excess energy for use when you need it most.</p>
-                </div>
-                <div class="features-card flex">
-                    <img src="./assets/asset 15.svg" alt="">
-                    <h3>Monitoring Systems</h3>
-                    <p>Track your energy production and consumption in real-time.</p>
-                </div>
-                <div class="features-card flex">
-                    <img src="./assets/asset 16.svg" alt="">
-                    <h3>Installation Services</h3>
-                    <p>Expert installation to ensure optimal performance.</p>
-                </div>
-                <div class="features-card flex">
-                    <img src="./assets/asset 17.svg" alt="">
-                    <h3>Maintenance</h3>
-                    <p>Keep your system running smoothly with regular check-ups.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- info -->
+    <div style="display: flex; justify-content: center; align-items: center; height: 228vh; overflow: hidden;">
+        <iframe 
+            src="https://docs.google.com/forms/d/e/1FAIpQLSc39Yd8kC0h536umiQCaMRzrH5NVkEf_XfzT8yhRUuqg1V0xw/viewform?embedded=true"
+            style="width: 100%; height: 100%; border: none;">
+            Loading…
+        </iframe>
+    </div>
+    
+    
+        <!-- info -->
 
     <!-- About Us Section -->
     <section class="about-us-section">
@@ -345,7 +322,7 @@
                     <img src="assets/companies/4.png" alt="RR" class="brand-logo" style="width: 10rem;">
                     <img src="assets/companies/1.png" alt="Havells" class="brand-logo" style="width: 10rem;">
                     <img src="assets/companies/3.png" alt="Polycab" class="brand-logo" style="width: 10rem;">
-                    <img src="assets/companies/2.png"alt="Adani" class="brand-logo" style="width: 10rem;">
+                    <img src="assets/companies/2.png" alt="Adani" class="brand-logo" style="width: 10rem;">
                 </div>
             </div>
 
@@ -387,23 +364,32 @@
             </div>
 
 
-<!-- Our Goal Section -->
-<div class="section-content">
-    <h2 class="section-heading">Our Goal</h2>
-    <div class="about-us-details">
-        <!-- Text on the left -->
-        <div class="about-text" style="text-align: justify;">
-            <p class="section-text">Our primary goal is to provide our clients with the best possible solar solutions that meet their energy needs while maximizing cost savings. We strive to make solar energy accessible and affordable for everyone, ensuring a positive impact on both the environment and our clients’ finances.</p>
-            <p class="section-text">We aim to continuously improve our services and stay at the forefront of solar technology advancements. By doing so, we ensure that our clients benefit from the latest innovations and achieve optimal energy efficiency.</p>
-            <p class="section-text">Our commitment to excellence is reflected in our personalized approach, where we work closely with each client to tailor solutions that align with their specific requirements and goals.</p>
-            <p class="section-text">At Genius Solar Services, we envision a future where sustainable energy solutions are the norm, and we are dedicated to playing a pivotal role in making that vision a reality.</p>
-        </div>
-        <!-- Photo on the right -->
-        <div class="about-photo">
-            <img src="assets/asset 40.jpeg" alt="Dhirendra Bandil" class="cutout-image">
-        </div>
-    </div>
-</div>
+            <!-- Our Goal Section -->
+            <div class="section-content">
+                <h2 class="section-heading">Our Goal</h2>
+                <div class="about-us-details">
+                    <!-- Text on the left -->
+                    <div class="about-text" style="text-align: justify;">
+                        <p class="section-text">Our primary goal is to provide our clients with the best possible solar
+                            solutions that meet their energy needs while maximizing cost savings. We strive to make
+                            solar energy accessible and affordable for everyone, ensuring a positive impact on both the
+                            environment and our clients’ finances.</p>
+                        <p class="section-text">We aim to continuously improve our services and stay at the forefront of
+                            solar technology advancements. By doing so, we ensure that our clients benefit from the
+                            latest innovations and achieve optimal energy efficiency.</p>
+                        <p class="section-text">Our commitment to excellence is reflected in our personalized approach,
+                            where we work closely with each client to tailor solutions that align with their specific
+                            requirements and goals.</p>
+                        <p class="section-text">At Genius Solar Services, we envision a future where sustainable energy
+                            solutions are the norm, and we are dedicated to playing a pivotal role in making that vision
+                            a reality.</p>
+                    </div>
+                    <!-- Photo on the right -->
+                    <div class="about-photo">
+                        <img src="assets/asset 40.jpeg" alt="Dhirendra Bandil" class="cutout-image">
+                    </div>
+                </div>
+            </div>
 
 
         </div>
@@ -486,8 +472,8 @@
 
         <div class="map-container" style="text-align: center; margin-top: 20px;">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1839.4697459260192!2d75.8951974!3d22.7676267!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39630388e4cbd12f%3A0xc18593ac51c36209!2sAquaguard%20Service%20Center%20indore%20Genius%20aqua%20services%20authorized%20by%20eureka%20Forbes%20ltd!5e0!3m2!1sen!2sin!4v1724962380920!5m2!1sen!2sin"
-                width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d919.7333743786323!2d75.89592842847983!3d22.767849135310925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396303744bf03fcd%3A0x67c60cf8068aaaca!2sGenius%20solar%20services%20Best%20solar%20plant%20company!5e0!3m2!1sen!2sin!4v1733283096317!5m2!1sen!2sin"
+                width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
@@ -591,7 +577,7 @@
     //map
     function initMap() {
         // The location of your place
-        const location = { lat: 22.7676267, lng: 75.8951974 };
+        const location = { lat: 22.768016057620304, lng: 75.89656276700111 };
 
         // Create a map centered on the location
         const map = new google.maps.Map(document.getElementById("map"), {
@@ -609,6 +595,17 @@
     // Initialize the map after the window loads
     window.onload = initMap;
     //map
+    // Wait until the window is fully loaded
+    window.addEventListener("load", () => {
+        // Hide the loading screen
+        const loadingScreen = document.getElementById("loading-screen");
+        loadingScreen.style.display = "none";
+
+        // Show the main content
+        const mainContent = document.getElementById("main-content");
+        mainContent.style.display = "block";
+    });
+
 
 </script>
 

@@ -409,7 +409,7 @@ footer {
 
 .welcome-section {
     position: relative;
-    padding: 50px 0;
+    padding: 250px 0;
     background-image: url('assets/New folder/BG.jpg');
     background-size: cover; /* Ensures the background covers the entire section */
     background-position: center center; /* Center the image */
