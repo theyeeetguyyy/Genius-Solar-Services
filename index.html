@@ -219,6 +219,43 @@
             animation: spin 1s linear infinite;
         }
 
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .form-iframe-wrapper {
+            width: 100%;
+            max-width: 800px;
+            height: 700px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            .form-iframe-wrapper {
+                height: 600px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .form-iframe-wrapper {
+                height: 500px;
+            }
+        }
+
         @keyframes spin {
             0% {
                 transform: rotate(0deg);
@@ -266,26 +303,28 @@
     <section class="welcome-section">
         <div class="container">
             <h1 class="typew-message" class="typew-message" style="color: white;">Welcome to Genius Solar Services</h1>
-            <p style="color: white; z-index: 0;"><i>Discover how Solar Solutions can help you<br> harness the power of the sun to reduce energy costs and
-                protect the environment.</i></p><BR>
+            <p style="color: white; z-index: 0;"><i>Discover how Solar Solutions can help you<br> harness the power of
+                    the sun to reduce energy costs and
+                    protect the environment.</i></p><BR>
             <a href="https://wa.me/+9826712299" class="primary-button" style="max-width: 50%;">
                 <i class="fab fa-whatsapp"></i> Contact Us
             </a>
         </div>
     </section>
 
-    <div style="display: flex; justify-content: center; align-items: center; height: 228vh; overflow: hidden;">
-        <iframe 
-            src="https://docs.google.com/forms/d/e/1FAIpQLSc39Yd8kC0h536umiQCaMRzrH5NVkEf_XfzT8yhRUuqg1V0xw/viewform?embedded=true"
-            style="width: 100%; height: 100%; border: none;">
-            Loading…
-        </iframe>
+    <!-- Get quotation -->
+    <div style="display: flex; justify-content: center; align-items: center; padding: 5rem;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc39Yd8kC0h536umiQCaMRzrH5NVkEf_XfzT8yhRUuqg1V0xw/viewform" 
+           target="_blank" 
+           style="background-color: #455EB5; color: white; padding: 15px 30px; font-size: 18px; border-radius: 8px; text-decoration: none; text-align: center; border: 2px solid #455EB5; transition: all 0.3s ease;"
+           onmouseover="this.style.backgroundColor='transparent'; this.style.color='#455EB5';"
+           onmouseout="this.style.backgroundColor='#455EB5'; this.style.color='white';">
+           <i class="fa fa-handshake-o" aria-hidden="true"></i> Get Free Quotation
+        </a>
     </div>
     
     
-        <!-- info -->
-
-    <!-- About Us Section -->
+    <!-- Who are we Section -->
     <section class="about-us-section">
         <div class="container">
 
